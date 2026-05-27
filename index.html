@@ -3,49 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroSustentável - 1ª Série Ensino Médio</title>
+    <title>AgroSustentável - Tecnologia e Futuro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">AgroForte & Sustentável</div>
+        <div class="logo">
+            <h1>Agro<span>Sustentável</span></h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#sobre">Sobre o Projeto</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#sobre">Sobre</a></li>
             </ul>
         </nav>
+        <button id="btn-acessibilidade" class="btn-theme">Alternar Contraste</button>
     </header>
 
-    <main id="inicio">
-        <section class="hero">
-            <h1>Equilíbrio entre Produção e Meio Ambiente</h1>
-            <p>Conheça as inovações tecnológicas que estão transformando o campo em um ecossistema mais verde e produtivo.</p>
-        </section>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Agro forte, futuro sustentável:</h2>
+            <p>O equilíbrio perfeito entre a alta produtividade do campo e a preservação do meio ambiente através da tecnologia.</p>
+            <a href="#tecnologias" class="btn-principal">Ver Tecnologias</a>
+        </div>
+    </section>
 
-        <section id="tecnologias" class="video-gallery">
-            <h2>Novas Tecnologias para a Sustentabilidade</h2>
+    <section id="tecnologias" class="galeria-secao">
+        <h2>Tecnologias para o Campo</h2>
+        <p class="subtitulo">Filtre os vídeos pelas inovações que estão a transformar o agronegócio:</p>
+        
+        <div class="filtros">
+            <button class="btn-filtro ativo" data-categoria="todos">Todos</button>
+            <button class="btn-filtro" data-categoria="drones">Drones e IoT</button>
+            <button class="btn-filtro" data-categoria="bioinsumos">Bioinsumos</button>
+            <button class="btn-filtro" data-categoria="energia">Energia Renovável</button>
+        </div>
+
+        <div class="grade-videos">
             
-            <div class="grid-container">
-                <div class="card" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
-                    <div class="video-placeholder">
-                        <img src="https://images.unsplash.com/photo-1560493458-3e5b17a6d36e?w=500" alt="Drones no monitoramento agrícola">
-                    </div>
-                    <h3>1. Drones e Monitoramento de Precisão</h3>
-                    <p>O uso de drones permite aplicar insumos apenas onde é necessário, reduzindo o desperdício de defensivos agrícolas e protegendo o solo.</p>
-                    <button class="btn-assistir">Assistir Vídeo</button>
+            <div class="card-video" data-categoria="drones">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Drones no Agro" allowfullscreen></iframe>
                 </div>
-
-                <div class="card" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
-                    <div class="video-placeholder">
-                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=500" alt="Sistemas de irrigação inteligente">
-                    </div>
-                    <h3>2. Irrigação Inteligente com IoT</h3>
-                    <p>Sensores conectados medem a umidade exata do solo, liberando água apenas na quantidade necessária e evitando o esgotamento hídrico.</p>
-                    <button class="btn-assistir">Assistir Vídeo</button>
+                <div class="card-info">
+                    <h3>Drones e Monitoramento IoT</h3>
+                    <p>Como o mapeamento aéreo identifica pragas precocemente e otimiza a aplicação de água na lavoura.</p>
                 </div>
+            </div>
 
-                <div class="card" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
-                    <div class="video-placeholder">
+            <div class="card-video" data-categoria="bioinsumos">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Bioinsumos" allowfullscreen></iframe>
+                </div>
+                <div class="card-info">
+                    <h3>Bioinsumos e Biotecnologia</h3>
+                    <p>O uso de microrganismos vivos e defensores biológicos para substituir os fertilizantes químicos.</p>
+                </div>
+            </div>
+
+            <div class="card-video" data-categoria="energia">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Energia Solar no Campo" allowfullscreen></iframe>
+                </div>
+                <div class="card-info">
+                    <h3>Energias Renováveis</h3>
+                    <p>A aplicação de painéis fotovoltaicos e biodigestores para tornar as propriedades autossuficientes.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="simulador" class="simulador-secao">
+        <div class="simulador-container">
+            <h2>Simulador de Economia Sustentável</h2>
+            <p>Insira a área da sua propriedade (em hectares) para calcular a estimativa de redução de recursos utilizando tecnologia IoT.</p>
+            
+            <div class="formulario-simulador">
+                <label for="hectares">Tamanho da Propriedade (Hectares):</label>
+                <input type="number" id="hectares" placeholder
